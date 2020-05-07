@@ -5,7 +5,10 @@
   "scripts": {
     "dev:client": "next dev frontend",
     "build:client": "next build",
-    "start:client": "next start"
+    "start:client": "next start",
+    "lint:client": "eslint -c frontend/.eslintrc.json --ext .js,.jsx frontend/src/**",
+    "lint:server": "eslint -c server/.eslintrc.json --ext .js,.jsx server/**",
+    "lint": "npm run lint:client && npm run lint:server"
   },
   "dependencies": {
     "next": "9.3.6",
