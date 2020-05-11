@@ -4,7 +4,7 @@ module.exports = async function ping(request, response) {
     payload: {
       message: 'pong',
     },
-    response_time: new Date().toISOString(),
-    request_id: request.ndla.invocationId,
+    responseTime: new Date().toISOString(),
+    requestId: request.ndla.invocationId,
   });
 };
