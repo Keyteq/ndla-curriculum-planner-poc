@@ -7,7 +7,7 @@
     "build:client": "next build",
     "start:client": "next start",
     "lint:client": "eslint -c frontend/.eslintrc.json --ext .js,.jsx frontend/**",
-    "lint:server": "eslint -c server/.eslintrc.json --ext .js,.jsx server/**"
+    "lint:server": "eslint --ignore-path ./server/.eslintignore -c ./server/.eslintrc.json --ext .js,.jsx ./server"
   },
   "lint-staged": {
     "./frontend/**/*.js(x)?": "npm run lint:client -- --fix",
