@@ -1,0 +1,33 @@
+name: NDLA - API client and server tests
+
+on:
+  push:
+    paths:
+      - 'server/**'
+
+env:
+  NODE_VERSION: 12.13.0
+
+jobs:
+  test_server:
+
+    name: TEST Server
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ env.NODE_VERSION }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+    - name: Server Install
+      run: |
+        pushd server
+        npm i
+        popd
+    - name: Server Lint
+      run: |
+        pushd server
+        npm run lint:server
+        popd
