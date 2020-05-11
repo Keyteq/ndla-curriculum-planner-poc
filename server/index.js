@@ -2,7 +2,7 @@ const express = require('express');
 const { v4: uuid } = require('uuid');
 const { ApolloServer } = require('apollo-server-express');
 
-const { schema } = require('./model');
+const { schema, models, mongooseConnect } = require('./model');
 const controllers = require('./controllers');
 const resolvers = require('./resolvers');
 
@@ -15,6 +15,7 @@ const apiPath = (path) => `/api/v1/${path}`;
 
 const createContext = () => ({
   invocationId: uuid(),
+  models,
 });
 
 const server = new ApolloServer({
@@ -54,9 +55,12 @@ app.get('*', (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  // eslint-disable-next-line no-console
-  console.log(`🚀 ndla-api express Server ready at http://${HOST}:${PORT}/api/v1/`);
-  // eslint-disable-next-line no-console
-  console.log(`🚀 ndla-api GQL ready at http://${HOST}:${PORT}/api/v1/graphql`);
+
+mongooseConnect(process.env.MONGO_URI).then(async () => {
+  app.listen(PORT, () => {
+    // eslint-disable-next-line no-console
+    console.log(`🚀 ndla-api express Server ready at http://${HOST}:${PORT}/api/v1/`);
+    // eslint-disable-next-line no-console
+    console.log(`🚀 ndla-api GQL ready at http://${HOST}:${PORT}/api/v1/graphql`);
+  });
 });
