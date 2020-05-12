@@ -8,7 +8,8 @@
     "build:client": "next build",
     "start:client": "next start",
     "lint:client": "eslint -c frontend/.eslintrc.json --ignore-path frontend/.eslintignore --ext .js,.jsx frontend",
-    "lint:server": "eslint --ignore-path ./server/.eslintignore -c ./server/.eslintrc.json --ext .js,.jsx ./server"
+    "lint:server": "eslint --ignore-path ./server/.eslintignore -c ./server/.eslintrc.json --ext .js,.jsx ./server",
+    "build:data": "env-cmd -f ./server/.env node ./server/lib/ndla/build-data.js"
   },
   "lint-staged": {
     "./frontend/**/*.js(x)?": "npm run lint:client -- --fix",
@@ -21,6 +22,7 @@
   },
   "dependencies": {
     "apollo-server-express": "^2.13.0",
+    "axios": "^0.19.2",
     "express": "^4.17.1",
     "graphql": "^15.0.0",
     "next": "9.3.6",

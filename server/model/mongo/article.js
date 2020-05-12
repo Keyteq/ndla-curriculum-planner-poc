@@ -7,19 +7,11 @@ const mongoSchema = new mongoose.Schema(
       required: '{PATH} is required!',
       unique: true,
     },
-    contentUri: {
+    title: {
       type: String,
-    },
-    name: {
-      type: String,
-    },
-    path: {
-      type: String,
+      required: '{PATH} is required!',
     },
     grepCodes: [{
-      type: String,
-    }],
-    topic_ndla_ids: [{
       type: String,
     }],
   },
@@ -28,6 +20,6 @@ const mongoSchema = new mongoose.Schema(
   },
 );
 
-const mongoModel = mongoose.model('Subject', mongoSchema);
+const mongoModel = mongoose.model('Article', mongoSchema);
 
 module.exports = mongoModel;
