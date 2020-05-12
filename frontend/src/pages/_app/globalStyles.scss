@@ -1,15 +1,15 @@
 :root {
-  --color-accent: #7015B7;
-  --color-accent-light: #FFE2FA;
-  --color-border: #979797;
-
-  --color-text: #000;
-  --color-bg: #fff;
-
-  --color-drop-zone-bg: #F8FBFF;
-  --color-drop-zone-active-bg: #EDF1F9;
-
-  --color-spinner: #0063FB;
+  --accent-color: #7015B7;
+  --accent-light-color: #FFE2FA;
+  --border-color: #979797;
+  
+  --text-color: #000;
+  --body-bg: #fff;
+  
+  --drop-zone-bg: #F8FBFF;
+  --drop-zone-active-bg: #EDF1F9;
+  
+  --spinner-progress-bg: #0063FB;
 }
 
 html {

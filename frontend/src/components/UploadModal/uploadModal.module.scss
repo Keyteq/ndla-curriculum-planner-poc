@@ -4,10 +4,10 @@
   position: relative;
   width: 100%;
   padding-bottom: calc(100% * (9 / 16));
-  background-color: var(--color-drop-zone-bg);
-  border: 1px dashed var(--color-border);
+  background-color: var(--drop-zone-bg);
+  border: 1px dashed var(--border-color);
 }
 
 .dropZoneActive {
-  background-color: var(--color-drop-zone-active-bg);
+  background-color: var(--drop-zone-active-bg);
 }
