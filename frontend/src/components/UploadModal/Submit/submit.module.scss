@@ -1,0 +1,19 @@
+@import '../dragDropContent.scss';
+
+.wrapper {
+  @extend .dragDropContent;
+  text-align: center;
+}
+
+.uploadButton {
+  appearance: none;
+  border: none;
+  padding: 0;
+  font-size: 1em;
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+.hiddenInput {
+  display: none;
+}

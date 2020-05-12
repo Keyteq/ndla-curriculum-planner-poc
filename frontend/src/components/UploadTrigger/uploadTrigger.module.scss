@@ -1,0 +1,27 @@
+.wrapper {
+  width: 100%;
+  padding: 60px 50px 40px;
+  background-color: var(--color-accent-light);
+}
+
+.title,
+.text {
+  font-size: 1.5rem;
+}
+
+.title {
+  margin: 0 0 1em;
+}
+
+.text {
+  margin: 0 0 2.5rem;
+}
+
+.button {
+  font-size: (18 / 16) + rem;
+  line-height: (40 / 16) + rem;
+  border: none;
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+  font-weight: 600;
+}
