@@ -2,13 +2,13 @@
 const keyMapFromUdir = {
   versjon: 'version',
   navn: 'name',
-  klasse_gruppe_informasjon: 'classGroupeInfo',
+  klasse_gruppe_informasjon: 'classGroupInfo',
   fradato: 'fromDate',
   tildato: 'toDate',
   spraak_kode: 'languagCode',
   aarstrinn_kode: 'yearLevelCode',
-  laereplan_data_liste: 'learnPlanList',
-  laereplan_kode: 'learnPlanCode',
+  laereplan_data_liste: 'curriculumList',
+  laereplan_kode: 'curriculumCode',
   kompetansemaalsett_data_liste: 'competenceGoalList',
   kompetansemaalsett_kode: 'competenceGoalCode',
   kompetansemaal_kode_liste: 'competenceGoalCodeList',
@@ -48,14 +48,14 @@ function transformUdir(data, keyMap = keyMapFromUdir) {
   return Object.fromEntries(root);
 }
 
-function getLearnPlanList(data) {
-  const { learnPlanList } = transformUdir(data, keyMapFromUdir);
-  return learnPlanList;
+function getcurriculumList(data) {
+  const { curriculumList } = transformUdir(data, keyMapFromUdir);
+  return curriculumList;
 }
 
 function getCompetenceGoals(data) {
-  const learnPlanList = getLearnPlanList(data);
-  return learnPlanList
+  const curriculumList = getcurriculumList(data);
+  return curriculumList
     .map(({ competenceGoalList }) => competenceGoalList
       .map(({ competenceGoalCodeList }) => competenceGoalCodeList)
       .flat())
@@ -63,8 +63,8 @@ function getCompetenceGoals(data) {
 }
 
 function getCoreElements(data) {
-  const learnPlanList = getLearnPlanList(data);
-  return learnPlanList
+  const curriculumList = getcurriculumList(data);
+  return curriculumList
     .map(({ coreElementCodeList }) => coreElementCodeList)
     .flat();
 }

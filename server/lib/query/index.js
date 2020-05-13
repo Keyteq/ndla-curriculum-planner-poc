@@ -18,7 +18,6 @@ async function buildIdList(udirPayload, models) {
   // TODO: OPTIMIZE
   return Promise.all(articles
     .map(async (articleData) => {
-      // subject_ids, topic_ids, grepCodes, ndla_id, _id
       const subjects = await models.Subject.find({ _id: articleData.subject_ids });
       return {
         // topicId: topics.map(({ _id }) => _id),

@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const ndlaBase = 'https://api.ff.ndla.no/graphql-api/graphql';
+const ndlaBase = process.env.NDLA_API_FF;
 
 const sendRequest = async (data, headers = {}) => axios({
   method: 'post',

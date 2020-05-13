@@ -8,7 +8,7 @@ const parser = require('./parser');
 function writeFile(filePath, data) {
   return fs.writeFile(filePath, data, (err) => {
     if (err) return console.log(err);
-    return console.log('File at: filePath');
+    return console.log(`File at: ${filePath}`);
   });
 }
 
@@ -36,14 +36,13 @@ async function createTopics() {
   await connectToMongo();
   const subjects = await models.Subject.find();
   // TODO: do this with the mongo query;
-  // eslint-disable-next-line camelcase
+  /* eslint-disable camelcase */
   const ids = subjects.filter(({ topic_ndla_ids }) => (
-    // eslint-disable-next-line camelcase
     topic_ndla_ids
     && Array.isArray(topic_ndla_ids)
     && topic_ndla_ids.length > 0))
-    // eslint-disable-next-line camelcase
     .map(({ ndla_id, topic_ndla_ids }) => ({ ndla_id, topic_ndla_ids }));
+  /* eslint-enable camelcase */
 
   const rawTopicRes = await ids.reduce(async (res, idSet) => {
     const subjectId = idSet.ndla_id;
@@ -60,18 +59,18 @@ async function createTopics() {
 
   const dirPath = path.resolve(__dirname, '../../../DEV/NDLA_DATA');
   const fileNameRaw = '/raw-topics.json';
-  const filePathRaw = dirPath.toString() + fileNameRaw;
+  const filePathRaw = dirPath + fileNameRaw;
   writeFile(filePathRaw, JSON.stringify(rawTopicRes, null, 2));
 
   const topics = parser.topic(rawTopicRes);
   const articles = parser.articleFromTopic(rawTopicRes);
 
   const fileName = '/topics.json';
-  const filePath = dirPath.toString() + fileName;
+  const filePath = dirPath + fileName;
   writeFile(filePath, JSON.stringify(topics, null, 2));
 
   const articleFileName = '/topics.json';
-  const articleFilePath = dirPath.toString() + articleFileName;
+  const articleFilePath = dirPath + articleFileName;
   writeFile(articleFilePath, JSON.stringify(articles, null, 2));
 
   const insertTopicsRes = await Promise.all(topics
