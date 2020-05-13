@@ -2,10 +2,12 @@ import React from 'react';
 
 import Container from '../components/Container';
 import ResourceItem from '../components/ResourceItem';
-
+import PlanLinkModal from '../components/PlanLinkModal';
 
 const ResourcesPage = () => {
   const [resources, setResources] = React.useState([]);
+  const [showPlanLinkModal, setShowPlanLinkModal] = React.useState(false);
+  const [modalResourceItem, setModalResourceItem] = React.useState(null);
 
   React.useEffect(() => {
     setResources([
@@ -76,6 +78,16 @@ const ResourcesPage = () => {
     ]);
   }, []);
 
+  const mountPlanLinkModal = (resourceId, resourceItemId) => {
+    const resource = resources.find((r) => r.id === resourceId);
+    const item = resource.items.find((i) => i.id === resourceItemId);
+    setModalResourceItem({
+      ...item,
+      type: resource.type,
+    });
+    setShowPlanLinkModal(true);
+  };
+
   return (
     <Container>
       <main>
@@ -95,8 +107,17 @@ const ResourcesPage = () => {
                   resourceGroup={resource.type}
                   title={item.label}
                   tags={item.tags}
+                  selectable
+                  showPlanLink={() => mountPlanLinkModal(resource.id, item.id)}
                 />
               ))}
+
+              {showPlanLinkModal && (
+                <PlanLinkModal
+                  resourceItem={modalResourceItem}
+                  setShowModal={setShowPlanLinkModal}
+                />
+              )}
             </header>
           </section>
         ))}
