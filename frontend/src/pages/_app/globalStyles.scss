@@ -1,15 +1,29 @@
 :root {
-  --color-accent: #7015B7;
-  --color-accent-light: #FFE2FA;
-  --color-border: #979797;
+  --accent-color: #7015b7;
+  --accent-light-color: #ffe2fa;
+  --border-color: #979797;
+  --link-color: #20588f;
+  
+  --text-color: #000;
+  --body-bg: #fff;
+  
+  --drop-zone-bg: #f8fbff;
+  --drop-zone-active-bg: #edf1f9;
+  
+  --spinner-progress-bg: #0063fb;
 
-  --color-text: #000;
-  --color-bg: #fff;
+  --lp-item-text-color: #184673;
+  --lp-path-item-bg: #f2efef;
+  --lp-resource-item-bg: #dde9d0;
+  --lp-tasks-item-bg: #fbeddc;
 
-  --color-drop-zone-bg: #F8FBFF;
-  --color-drop-zone-active-bg: #EDF1F9;
+  --subject-tag-bg: #20588f;
+  --subject-tag-text-color: #fff;
+  --type-tag-bg: #f7c978;
+  --type-tag-text-color: #444;
 
-  --color-spinner: #0063FB;
+  --checkbox-border-color: #a5bcd3;
+  --checkbox-bg-color: #fff;
 }
 
 html {

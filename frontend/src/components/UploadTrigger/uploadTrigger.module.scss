@@ -1,7 +1,7 @@
 .wrapper {
   width: 100%;
   padding: 60px 50px 40px;
-  background-color: var(--color-accent-light);
+  background-color: var(--accent-light-color);
 }
 
 .title,
@@ -21,7 +21,7 @@
   font-size: (18 / 16) + rem;
   line-height: (40 / 16) + rem;
   border: none;
-  background-color: var(--color-accent);
-  color: var(--color-bg);
+  background-color: var(--accent-color);
+  color: var(--body-bg);
   font-weight: 600;
 }
