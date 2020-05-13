@@ -35,6 +35,12 @@ const mongoSchema = new mongoose.Schema(
     article_ndla_ids: [{
       type: String,
     }],
+    subject_ids: [{
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Subject',
+      required: '{PATH} is required!',
+      unique: true,
+    }],
   },
   {
     timestamps: true,

@@ -14,6 +14,17 @@ const mongoSchema = new mongoose.Schema(
     grepCodes: [{
       type: String,
     }],
+    // TODO: Not an ideal data struct, but the fastest way to do this. (subject_ids && topic_ids)
+    subject_ids: [{
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Subject',
+      required: '{PATH} is required!',
+    }],
+    topic_ids: [{
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Topic',
+      required: '{PATH} is required!',
+    }],
   },
   {
     timestamps: true,
