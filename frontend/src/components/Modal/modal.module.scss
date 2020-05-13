@@ -8,3 +8,19 @@
   background-color: white;
   border: 1px solid var(--border-color);
 }
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.modalTitle {
+  margin: 0 1rem 0 0;
+}
+
+.closeButtonContainer {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
