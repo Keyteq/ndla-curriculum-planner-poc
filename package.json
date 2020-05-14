@@ -25,12 +25,13 @@
     "axios": "^0.19.2",
     "express": "^4.17.1",
     "graphql": "^15.0.0",
+    "mongoose": "^5.9.13",
+    "multer": "^1.4.2",
     "next": "9.3.6",
     "prop-types": "^15.7.2",
-    "react-dom": "16.13.1",
     "react": "16.13.1",
+    "react-dom": "16.13.1",
     "sass": "^1.26.5",
-    "mongoose": "^5.9.13",
     "uuid": "^8.0.0"
   },
   "devDependencies": {
