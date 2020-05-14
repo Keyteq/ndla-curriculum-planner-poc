@@ -2,4 +2,5 @@
 module.exports = [
   require('./base-ndla'),
   require('./graphql-base'),
+  require('./plan'),
 ];
