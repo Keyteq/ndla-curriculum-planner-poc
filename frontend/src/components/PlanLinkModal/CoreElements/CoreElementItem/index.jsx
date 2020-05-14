@@ -1,17 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CoreElementItem = ({ id, name }) => (
-  <article key={id}>
-    <header>
-      <h1>{name}</h1>
+import s from './coreElement.module.scss';
+
+const CoreElementItem = ({ name }) => (
+  <article className={s.coreElement}>
+    <header className={s.header}>
+      <h1 className={s.name}>{name}</h1>
       <button type="button">Åpne</button>
     </header>
   </article>
 );
 
 CoreElementItem.propTypes = {
-  id: PropTypes.string,
   name: PropTypes.string,
 };
 

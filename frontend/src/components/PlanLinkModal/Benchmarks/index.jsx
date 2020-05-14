@@ -1,18 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Benchmarks = ({ benchmarks }) => (
-  <section>
-    <h1>Kompetansemål</h1>
+import s from './benchmarks.module.scss';
 
-    <ul>
+const Benchmarks = ({ benchmarks }) => (
+  <section className={s.benchmarks}>
+    <h1 className={s.title}>Kompetansemål</h1>
+
+    <ul className={s.list}>
       {Array.isArray(benchmarks) && benchmarks.map((bm) => (
-        <li key={bm.id}>
+        <li key={bm.id} className={s.listItem}>
           <div>
-            <p><b>utføre arbeidsoppgaver inner produksjon og høsting eller fangst</b></p>
-          </div>
-          <div>
-            <a href="/">Søk på alle ressurser som passer til dette kompetansemålet</a>
+            <p><b>{bm.text}</b></p>
           </div>
         </li>
       ))}

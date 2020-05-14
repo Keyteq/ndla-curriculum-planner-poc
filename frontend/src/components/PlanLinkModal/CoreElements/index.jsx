@@ -1,17 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import CoreElementItem from './CoreElementItem';
+
+import s from './coreElements.module.scss';
+
 const CoreElements = ({ elements }) => (
-  <section>
-    <h1>Kjerneelement</h1>
+  <section className={s.coreElements}>
+    <h1 className={s.title}>Kjerneelement</h1>
 
     {Array.isArray(elements) && elements.map((element) => (
-      <article key={element.id}>
-        <header>
-          <h1>{element.name}</h1>
-          <button type="button">Åpne</button>
-        </header>
-      </article>
+      <CoreElementItem key={element.id} name={element.name} />
     ))}
   </section>
 );

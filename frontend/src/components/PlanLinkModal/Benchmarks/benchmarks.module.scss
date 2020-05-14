@@ -1,0 +1,40 @@
+@import "../shared.scss";
+
+.benchmarks {
+  @extend .section
+}
+
+.title {
+  @extend .sectionTitle;
+}
+
+.list {
+  padding: 0 0 0 calc(1rem + 10px);
+  margin: 0;
+  list-style: none;
+}
+
+.listItem {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    top: 6px;
+    left: calc(-1rem - 10px);
+    background-color: var(--list-bullet-bg);
+    border-radius: 50%;
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 3rem;
+  }
+
+  p {
+    font-size: 18 / 16 + rem;
+    margin: 0;
+  }
+}

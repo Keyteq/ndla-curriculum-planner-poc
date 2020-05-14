@@ -1,0 +1,18 @@
+.section {
+  padding: 0 1.5rem;
+
+  &:not(:last-child) {
+    margin-bottom: 3.5rem;
+  }
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  margin: 1.25rem 0;
+  text-transform: uppercase;
+  font-weight: 400;
+
+  &::after {
+    content: ":";
+  }
+}
