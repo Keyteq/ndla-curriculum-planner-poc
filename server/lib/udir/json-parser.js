@@ -6,7 +6,7 @@ const keyMapFromUdir = {
   fradato: 'fromDate',
   tildato: 'toDate',
   spraak_kode: 'languagCode',
-  aarstrinn_kode: 'yearLevelCode',
+  aarstrinn_kode: 'gradeCode',
   laereplan_data_liste: 'curriculumList',
   laereplan_kode: 'curriculumCode',
   kompetansemaalsett_data_liste: 'competenceGoalList',
@@ -19,12 +19,12 @@ const keyMapFromUdir = {
   evaluering_beskrivelse: 'evaluationDescription',
   hvorfor_beskrivelse: 'whyDescription',
   kompetanse_beskrivelse: 'competenceDescription',
-  underveisvurdering_liste: 'routeAssessmentList',
+  underveisvurdering_liste: 'assessmentList',
   laeringsressurser_liste: 'learningResourcesList',
   tittel: 'title',
   beskrivelse: 'description',
   laeringsarenaer_liste: 'learningArenasList',
-  arbeidsaktiviteter_liste: 'workActivitiesList',
+  arbeidsaktiviteter_liste: 'tasksActivitiesList',
 };
 
 function transformUdir(data, keyMap = keyMapFromUdir) {
