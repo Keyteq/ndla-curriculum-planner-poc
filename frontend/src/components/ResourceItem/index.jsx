@@ -16,41 +16,41 @@ const ResourceItem = ({
         <h1 className={s.title}>{title}</h1>
       </a>
 
-      {(Array.isArray(tags) || shareable) && (
+      {((tags && Object.keys(tags).length > 0) || shareable) && (
         <div className={s.rightContainer}>
           <div className={s.tagsContainer}>
             {tags.subject && (
-            <ul className={s.tagsList}>
-              {tags.subject.map((tag) => (
-                <li
-                  className={s.tag}
-                  style={{
-                    backgroundColor: 'var(--subject-tag-bg)',
-                    color: 'var(--subject-tag-text-color)',
-                  }}
-                  key={tag.id}
-                >
-                  {tag.label}
-                </li>
-              ))}
-            </ul>
+              <ul className={s.tagsList}>
+                {tags.subject.map((tag) => (
+                  <li
+                    className={s.tag}
+                    style={{
+                      backgroundColor: 'var(--subject-tag-bg)',
+                      color: 'var(--subject-tag-text-color)',
+                    }}
+                    key={tag.id}
+                  >
+                    {tag.label}
+                  </li>
+                ))}
+              </ul>
             )}
 
             {tags.type && (
-            <ul className={s.tagsList}>
-              {tags.type.map((tag) => (
-                <li
-                  className={s.tag}
-                  style={{
-                    backgroundColor: 'var(--type-tag-bg)',
-                    color: 'var(--type-tag-text-color)',
-                  }}
-                  key={tag.id}
-                >
-                  {tag.label}
-                </li>
-              ))}
-            </ul>
+              <ul className={s.tagsList}>
+                {tags.type.map((tag) => (
+                  <li
+                    className={s.tag}
+                    style={{
+                      backgroundColor: 'var(--type-tag-bg)',
+                      color: 'var(--type-tag-text-color)',
+                    }}
+                    key={tag.id}
+                  >
+                    {tag.label}
+                  </li>
+                ))}
+              </ul>
             )}
           </div>
 
