@@ -2,7 +2,6 @@
 /* eslint-disable no-underscore-dangle */
 const { getCompetenceGoals, getCoreElements } = require('../udir/json-parser');
 
-
 /**
  * Get a list of NDLA resources, from a UDIR JSON payload.
  * @param {Object} udirPayload - UDIR JSON payload
@@ -31,6 +30,33 @@ async function buildIdList(udirPayload, models) {
     }));
 }
 
+/**
+ * Get a list of NDLA Articles, from a UDIR JSON payload.
+ * @param {Object} udirPayload - UDIR JSON payload
+ * @param {Object} models - Mongo models
+ */
+function getArticlesFromUdir(udirPayload, models) {
+  const compGoals = getCompetenceGoals(udirPayload);
+  const coreEl = getCoreElements(udirPayload);
+  const udirCodes = [...compGoals, ...coreEl];
+  return models.Article.find({ grepCodes: { $in: udirCodes } });
+}
+
+/**
+ * Get a list of NDLA Articles, from a UDIR JSON payload.
+ * @param {Object} udirPayload - UDIR JSON payload
+ * @param {Object} models - Mongo models
+ */
+async function getArticleIdsAndUdirIdsFromUdir(udirPayload, models) {
+  const compGoals = getCompetenceGoals(udirPayload);
+  const coreEl = getCoreElements(udirPayload);
+  const udirCodes = [...compGoals, ...coreEl];
+  const articles = await models.Article.find({ grepCodes: { $in: udirCodes } });
+  return articles.map(({ ndla_id: ndlaId, grepCodes }) => ({ ndlaId, grepCodes }));
+}
+
 module.exports = {
   buildIdList,
+  getArticlesFromUdir,
+  getArticleIdsAndUdirIdsFromUdir,
 };
