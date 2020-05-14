@@ -118,10 +118,12 @@ const ResourcesPage = () => {
         {
           id: '0c1b734512aad27a6f49c429',
           name: 'Språklæring',
+          description: 'Det finnes mange rare forestillinger om det kinesiske språket. På grunn av skrifttegnene tror mange at kineserne går rundt og snakker i bilder. Det er i og for seg riktig at kinesisk har et frodig bildespråk, men det skyldes ikke skrifttegnene, det skyldes lange og rike språktradisjoner.',
         },
         {
           id: 'a756da74ee01181c4335b71d',
           name: 'Muntlig kommunikasjon',
+          description: 'Det finnes mange rare forestillinger om det kinesiske språket. På grunn av skrifttegnene tror mange at kineserne går rundt og snakker i bilder. Det er i og for seg riktig at kinesisk har et frodig bildespråk, men det skyldes ikke skrifttegnene, det skyldes lange og rike språktradisjoner.',
         },
       ],
       type: resource.type,

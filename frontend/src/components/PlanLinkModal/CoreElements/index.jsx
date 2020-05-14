@@ -5,15 +5,32 @@ import CoreElementItem from './CoreElementItem';
 
 import s from './coreElements.module.scss';
 
-const CoreElements = ({ elements }) => (
-  <section className={s.coreElements}>
-    <h1 className={s.title}>Kjerneelement</h1>
+const CoreElements = ({ elements }) => {
+  const [showDescription, setShowDescription] = React.useState(elements.map(() => false));
 
-    {Array.isArray(elements) && elements.map((element) => (
-      <CoreElementItem key={element.id} name={element.name} />
-    ))}
-  </section>
-);
+  const toggleDescription = (index) => {
+    setShowDescription(showDescription.map((v, i) => {
+      if (index !== i) return false;
+      return !v;
+    }));
+  };
+
+  return (
+    <section className={s.coreElements}>
+      <h1 className={s.title}>Kjerneelement</h1>
+
+      {Array.isArray(elements) && elements.map((element, i) => (
+        <CoreElementItem
+          key={element.id}
+          name={element.name}
+          description={element.description}
+          toggleDescription={() => toggleDescription(i)}
+          descriptionIsShowing={showDescription[i]}
+        />
+      ))}
+    </section>
+  );
+};
 
 CoreElements.propTypes = {
   elements: PropTypes.arrayOf(PropTypes.shape({
