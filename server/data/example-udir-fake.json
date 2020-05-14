@@ -1,0 +1,101 @@
+{
+    "versjon": "1.0",
+    "id": "CkQIkKt81YIeqGi35STvKLFx9KKcoKz01qan+pI+kIE=",
+    "navn": "My 033671 ProjectPlan",
+    "klasse_gruppe_informasjon": "Klasse 5b",
+    "fradato": "2019-11-03T00:00:00+01:00",
+    "tildato": "2019-11-30T00:00:00+01:00",
+    "spraak_kode": "nno",
+    "aarstrinn_kode": "aarstrinn7",
+    "laereplan_data_liste": [
+      {
+        "laereplan_kode": "NAT02-04",
+        "kompetansemaalsett_data_liste": [
+          {
+            "kompetansemaalsett_kode": "KV61",
+            "kompetansemaal_kode_liste": [
+              "KM1195",
+              "KM1237"
+            ]
+          }
+        ],
+        "kjerneelement_kode_liste": [
+          "KE110",
+          "KE58"
+        ],
+        "tverrfagligtema_kode_liste": [
+          "TT2"
+        ],
+        "grunnleggendeferdighet_kode_liste": [
+          "GF1",
+          "GF2"
+        ]
+      },
+      {
+        "laereplan_kode": "MUS03-02",
+        "kompetansemaalsett_data_liste": [
+          {
+            "kompetansemaalsett_kode": "KV191",
+            "kompetansemaal_kode_liste": [
+              "KM722",
+              "KM485"
+            ]
+          }
+        ],
+        "kjerneelement_kode_liste": [
+          "KE54",
+          "KE70"
+        ],
+        "tverrfagligtema_kode_liste": [],
+        "grunnleggendeferdighet_kode_liste": [
+          "GF2",
+          "GF4"
+        ]
+      },
+      {
+        "laereplan_kode": "RLE01-03",
+        "kompetansemaalsett_data_liste": [
+          {
+            "kompetansemaalsett_kode": "KV177",
+            "kompetansemaal_kode_liste": []
+          }
+        ],
+        "kjerneelement_kode_liste": [
+          "KE175"
+        ],
+        "tverrfagligtema_kode_liste": [
+          "TT2"
+        ],
+        "grunnleggendeferdighet_kode_liste": [
+          "GF1",
+          "GF4"
+        ]
+      }
+    ],
+    "evaluering_nivaa": 3,
+    "evaluering_beskrivelse": "Kort Evaluering Beskrivelse",
+    "hvorfor_beskrivelse": "Kort Hvorfor Lære Dette Beskrivelse",
+    "kompetanse_beskrivelse": "Kort Kompetanse Beskrivelse",
+    "underveisvurdering_liste": [],
+    "laeringsressurser_liste": [
+      {
+        "tittel": "Kort Læringsressurser Tittel",
+        "beskrivelse": "Kort Læringsressurser Beskrivelse"
+      },
+      {
+        "tittel": "Kort Læringsressurser Tittel",
+        "beskrivelse": "Kort Læringsressurser Beskrivelse"
+      }
+    ],
+    "laeringsarenaer_liste": [],
+    "arbeidsaktiviteter_liste": [
+      {
+        "tittel": "Kort Arbeidsaktiviteter Tittel",
+        "beskrivelse": ""
+      },
+      {
+        "tittel": "Meeeeeeeeeeget Laaaaaaaang Arbeidsaktiviteter Tiiiiiiiiiittteeeeeeeeeel",
+        "beskrivelse": "Meeeeeeeeeeget Laaaaaaaang Arbeidsaktiviteter Beeeeeeeeeskriiiiiiiiiveeeeeeeeeelseeeeeeeeee"
+      }
+    ]
+  }
