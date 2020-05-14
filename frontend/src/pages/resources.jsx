@@ -5,7 +5,9 @@ import ResourceItem from '../components/ResourceItem';
 import PlanLinkModal from '../components/PlanLinkModal';
 
 const ResourcesPage = () => {
+  const [curriculum] = React.useState({ name: 'Skriveprosjekt' });
   const [resources, setResources] = React.useState([]);
+  const [aggregatedTags, setAggregatedTags] = React.useState(null);
   const [showPlanLinkModal, setShowPlanLinkModal] = React.useState(false);
   const [modalResourceItem, setModalResourceItem] = React.useState(null);
 
@@ -78,11 +80,50 @@ const ResourcesPage = () => {
     ]);
   }, []);
 
+  React.useEffect(() => {
+    if (resources.length) {
+      const rTags = [].concat(
+        ...resources.map((resource) => resource.items.map((item) => item.tags)),
+      );
+
+      const allTags = {};
+      rTags.forEach((rTag) => {
+        Object.entries(rTag).forEach(([key, tags]) => {
+          allTags[key] = [...(allTags[key] || []), ...tags];
+        });
+      });
+
+      Object.entries(allTags).forEach(([key, tags]) => {
+        allTags[key] = tags.filter((tag, i, self) => (
+          i === self.findIndex((t) => t.label === tag.label)
+        ));
+      });
+
+      setAggregatedTags(allTags);
+    }
+  }, [resources]);
+
   const mountPlanLinkModal = (resourceId, resourceItemId) => {
     const resource = resources.find((r) => r.id === resourceId);
     const item = resource.items.find((i) => i.id === resourceItemId);
     setModalResourceItem({
       ...item,
+      benchmarks: [
+        {
+          id: '885147432aa0a0f54cf6be44',
+          text: 'utføre arbeidsoppgaver innen produksjon og høsting eller fangst',
+        },
+      ],
+      coreElements: [
+        {
+          id: '0c1b734512aad27a6f49c429',
+          name: 'Språklæring',
+        },
+        {
+          id: 'a756da74ee01181c4335b71d',
+          name: 'Muntlig kommunikasjon',
+        },
+      ],
       type: resource.type,
     });
     setShowPlanLinkModal(true);
@@ -90,6 +131,28 @@ const ResourcesPage = () => {
 
   return (
     <Container>
+      <header>
+        <p>
+          {`Velkommen til dine ressurser fra NDLA for ${curriculum.name}.`}
+          {aggregatedTags && ' Under finner du ressurser av type:'}
+        </p>
+
+        {aggregatedTags && (
+          <ul>
+            {Object.entries(aggregatedTags)?.map(([key, tags]) => (
+              <li key={key}>
+                <p>{key}</p>
+                <ul>
+                  {tags?.map((tag) => (
+                    <li key={tag.id}>{tag.label}</li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ul>
+        )}
+      </header>
+
       <main>
         <header>
           <p>Læringsressursar</p>
@@ -107,7 +170,7 @@ const ResourcesPage = () => {
                   resourceGroup={resource.type}
                   title={item.label}
                   tags={item.tags}
-                  selectable
+                  shareable
                   showPlanLink={() => mountPlanLinkModal(resource.id, item.id)}
                 />
               ))}
