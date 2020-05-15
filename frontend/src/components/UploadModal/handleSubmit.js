@@ -1,31 +1,22 @@
-const submit = async (file, setSubmitting, setSubmitSuccess, setSubmitError) => {
+import getGlobals from '../../utils/getGlobals';
+
+const submit = async (file) => {
   const formData = new FormData();
   formData.append('plan', file);
 
-  setSubmitting(true);
-  try {
-    const res = await fetch('/api/plan', {
-      method: 'POST',
-      headers: {
-        'content-type': 'multipart/form-data',
-      },
-      body: formData,
-    });
-    if (!res.ok) {
-      throw new Error('Kunne ikke laste opp læreplanen. Prøv igjen senere.');
-    }
+  const res = await fetch(`${getGlobals('API_URL')}/api/v1/upload/plan`, {
+    method: 'POST',
+    mode: 'cors',
+    body: formData,
+  });
 
-    setTimeout(() => {
-      setSubmitting(false);
-      setSubmitSuccess(true);
-    }, 4219);
-  } catch (err) {
-    console.error(err);
-
-    setSubmitError('Kunne ikke laste opp læreplanen. Prøv igjen senere.');
-    setSubmitting(false);
-    setSubmitSuccess(false);
+  if (!res.ok) {
+    throw new Error('Kunne ikke laste opp læreplanen. Prøv igjen senere.');
   }
+
+  const { payload } = await res.json();
+
+  return payload?.planId;
 };
 
 export default submit;
