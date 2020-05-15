@@ -18,18 +18,37 @@ import s from './uploadModal.module.scss';
 
 const FileUploadForm = ({ showModal, setShowModal }) => {
   const [file, setFile] = React.useState(null);
-  const [planId, setPlanId] = React.useState();
+  const [planId, setPlanId] = React.useState('');
   const [submitting, setSubmitting] = React.useState(false);
   const [submitErr, setSubmitErr] = React.useState(null);
   const [submitSuccess, setSubmitSuccess] = React.useState(false);
   const [inDropZone, setInDropZone] = React.useState(false);
+  const [href, setHref] = React.useState('');
 
   const inputRef = React.useRef(null);
+
+  React.useEffect(() => {
+    if (process.browser) {
+      setHref(window.location.href);
+    }
+  }, []);
 
   const openFileDialog = () => {
     if (inputRef) {
       inputRef.current.click();
     }
+  };
+
+  const toggleModal = (mounted = false) => {
+    setShowModal(mounted);
+
+    // reset state
+    setFile(null);
+    setPlanId('');
+    setSubmitting(false);
+    setSubmitErr(null);
+    setSubmitSuccess(false);
+    setInDropZone(false);
   };
 
   const submit = async (f) => {
@@ -77,7 +96,7 @@ const FileUploadForm = ({ showModal, setShowModal }) => {
   return (
     <>
       {showModal && (
-        <Modal title="Last opp planleggingsfil" setMounted={setShowModal}>
+        <Modal title={submitSuccess ? 'Fil mottatt' : 'Last opp planleggingsfil'} setMounted={toggleModal}>
           <div
             className={[s.dropZone, inDropZone && s.dropZoneActive].filter(Boolean).join(' ')}
             onDrop={drop}
@@ -97,8 +116,8 @@ const FileUploadForm = ({ showModal, setShowModal }) => {
               <SubmitError />
             )}
 
-            {!submitting && submitSuccess && (
-              <SubmitSuccess planId={planId} />
+            {!submitting && submitSuccess && !!file && (
+              <SubmitSuccess fileName={file.name} baseUrl={href} planId={planId} />
             )}
           </div>
         </Modal>
