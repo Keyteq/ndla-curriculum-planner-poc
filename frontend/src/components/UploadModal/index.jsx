@@ -18,6 +18,7 @@ import s from './uploadModal.module.scss';
 
 const FileUploadForm = ({ showModal, setShowModal }) => {
   const [file, setFile] = React.useState(null);
+  const [planId, setPlanId] = React.useState();
   const [submitting, setSubmitting] = React.useState(false);
   const [submitErr, setSubmitErr] = React.useState(null);
   const [submitSuccess, setSubmitSuccess] = React.useState(false);
@@ -25,29 +26,52 @@ const FileUploadForm = ({ showModal, setShowModal }) => {
 
   const inputRef = React.useRef(null);
 
-  React.useEffect(() => {
-    if (submitSuccess) {
-      setTimeout(() => {
-        setShowModal(false);
-
-        // reset state
-        setFile(null);
-        setSubmitting(false);
-        setSubmitErr(false);
-        setSubmitSuccess(false);
-      }, 2000);
-    }
-  }, [submitSuccess]);
-
   const openFileDialog = () => {
     if (inputRef) {
       inputRef.current.click();
     }
   };
 
+  const submit = async (f) => {
+    setSubmitting(true);
+
+    try {
+      const id = await handleSubmit(f);
+
+      setSubmitting(false);
+      setSubmitSuccess(true);
+      setSubmitErr(null);
+
+      return id;
+    } catch (err) {
+      console.log(err);
+
+      setSubmitting(false);
+      setSubmitSuccess(false);
+      setSubmitErr(err.message);
+
+      return null;
+    }
+  };
+
   const change = async (e) => {
+    if (!e.target.files[0]) {
+      setSubmitErr('Kunne ikke laste opp filen');
+    }
+
     setFile(e.target.files[0]);
-    await handleSubmit(e.target.files[0], setSubmitting, setSubmitSuccess, setSubmitErr);
+    const id = await submit(e.target.files[0]);
+    setPlanId(id);
+  };
+
+  const drop = async (e) => {
+    try {
+      const f = handleDrop(e);
+      const id = await submit(f);
+      setPlanId(id);
+    } catch (err) {
+      setSubmitErr(err.message);
+    }
   };
 
   return (
@@ -56,7 +80,7 @@ const FileUploadForm = ({ showModal, setShowModal }) => {
         <Modal title="Last opp planleggingsfil" setMounted={setShowModal}>
           <div
             className={[s.dropZone, inDropZone && s.dropZoneActive].filter(Boolean).join(' ')}
-            onDrop={(e) => handleDrop(e, setFile, setSubmitErr, setSubmitting, setSubmitSuccess)}
+            onDrop={drop}
             onDragOver={(e) => handleDragOver(e, setInDropZone)}
             onDragEnter={handleDragEnter}
             onDragLeave={(e) => handleDragLeave(e, setInDropZone)}
@@ -74,7 +98,7 @@ const FileUploadForm = ({ showModal, setShowModal }) => {
             )}
 
             {!submitting && submitSuccess && (
-              <SubmitSuccess />
+              <SubmitSuccess planId={planId} />
             )}
           </div>
         </Modal>
