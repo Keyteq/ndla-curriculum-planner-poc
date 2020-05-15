@@ -10,6 +10,10 @@ class NDLADoc extends Document {
   }
 
   render() {
+    const globals = `window.__GLOBALS__ = JSON.parse('${JSON.stringify({
+      API_URL: process.env.API_URL,
+    })}')`;
+
     return (
       <Html>
         <Head />
@@ -17,6 +21,7 @@ class NDLADoc extends Document {
           <Main />
           <div data-portal-root />
           <NextScript />
+          <script type="text/javascript" dangerouslySetInnerHTML={{ __html: globals }} />
         </body>
       </Html>
     );

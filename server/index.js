@@ -1,7 +1,10 @@
+const http = require('http');
+
 const express = require('express');
 const { v4: uuid } = require('uuid');
 const { ApolloServer } = require('apollo-server-express');
 const multer = require('multer');
+const cors = require('cors');
 
 const { schema, models, mongooseConnect } = require('./model');
 const controllers = require('./controllers');
@@ -33,6 +36,8 @@ server.applyMiddleware({
   path: apiPath('graphql'),
 });
 
+app.use(cors('*'));
+
 /**
  * Set a global context on all requests named min.
  */
@@ -50,15 +55,21 @@ app.get(apiPath('ping'), controllers.ping);
 app.post(apiPath('upload/plan'), upload.single('plan'), controllers.upload.plan);
 
 // For all paths not defined return 404;
-app.get('*', (req, res) => {
-  res.status(404).json({
+app.use((req, res, next) => {
+  const err = Object.assign(new Error(http.STATUS_CODES[404]), { code: 'E_NOT_FOUND', status: 404 });
+  next(err);
+});
+
+// handle handle errors and send json response
+app.use((err, req, res, _next) => {
+  const status = res.statusCode !== 200 ? res.statusCode : 500;
+  res.status(status).json({
     payload: {
-      code: 'E_NOT_FOUND',
-      message: 'Resource not found',
+      code: err.code,
+      message: http.STATUS_CODES[status],
     },
   });
 });
-
 
 mongooseConnect(process.env.MONGO_URI).then(async () => {
   app.listen(PORT, () => {

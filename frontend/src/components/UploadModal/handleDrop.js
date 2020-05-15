@@ -1,16 +1,13 @@
-import handleSubmit from './handleSubmit';
+// import handleSubmit from './handleSubmit';
 
-const handleDrop = async (e, setFile, setSubmitError, setSubmitting, setSubmitSuccess) => {
+const handleDrop = (e) => {
   e.preventDefault();
   e.stopPropagation();
-  const [file] = [...e.dataTransfer.files];
-  if (file.type !== 'application/json') {
-    setSubmitError('Vennligst last opp en JSON-fil');
-    return;
-  }
 
-  setFile(file);
-  await handleSubmit(file, setSubmitting, setSubmitSuccess, setSubmitError);
+  const [file] = [...e.dataTransfer.files];
+  if (file.type !== 'application/json') throw new Error('Vennligst last opp en JSON-fil');
+
+  return file;
 };
 
 export default handleDrop;
