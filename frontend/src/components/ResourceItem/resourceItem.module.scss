@@ -8,10 +8,13 @@
   align-items: center;
   justify-content: space-between;
   flex: 1;
-  margin-right: 1rem;
   padding: 0 2rem 0 1.5rem;
 
   &:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  &:not(:last-of-type) {
     margin-bottom: 0.25rem;
   }
 }
@@ -29,7 +32,7 @@
 }
 
 .title {
-  font-size: 1.25;
+  font-size: 1.25rem;
   margin: 0;
 }
 

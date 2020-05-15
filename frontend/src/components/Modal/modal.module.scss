@@ -2,9 +2,26 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 640px;
-  padding: 40px;
+  width: 100%;
+  max-width: 55rem;
+  padding: 2.5rem;
   transform: translate(-50%, -50%);
   background-color: white;
   border: 1px solid var(--border-color);
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+
+.modalTitle {
+  margin: 0 1rem 0 0;
+}
+
+.closeButtonContainer {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
 }
