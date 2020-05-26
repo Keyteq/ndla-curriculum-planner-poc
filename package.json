@@ -9,7 +9,8 @@
     "start:client": "next start",
     "lint:client": "eslint -c frontend/.eslintrc.json --ignore-path frontend/.eslintignore --ext .js,.jsx frontend",
     "lint:server": "eslint --ignore-path ./server/.eslintignore -c ./server/.eslintrc.json --ext .js,.jsx ./server",
-    "build:data": "env-cmd -f ./server/.env node ./server/lib/ndla/build-data.js"
+    "build:data": "env-cmd -f ./server/.env node ./server/lib/ndla/build-data.js",
+    "gre": "env-cmd -f ./server/.env node ./server/data/get-resources.js"
   },
   "lint-staged": {
     "./frontend/**/*.js(x)?": "npm run lint:client -- --fix",

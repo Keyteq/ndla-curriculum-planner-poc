@@ -52,7 +52,11 @@ async function getArticleIdsAndUdirIdsFromUdir(udirPayload, models) {
   const coreEl = getCoreElements(udirPayload);
   const udirCodes = [...compGoals, ...coreEl];
   const articles = await models.Article.find({ grepCodes: { $in: udirCodes } });
-  return articles.map(({ ndla_id: ndlaId, grepCodes }) => ({ ndlaId, grepCodes }));
+  return articles.map(({
+    ndla_id: ndlaId,
+    grepCodes,
+    ndla_resource_ids: ndlaResourceIds,
+  }) => ({ ndlaId, grepCodes, ndlaResourceIds }));
 }
 
 module.exports = {

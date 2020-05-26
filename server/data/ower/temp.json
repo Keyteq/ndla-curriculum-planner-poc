@@ -1,0 +1,771 @@
+{
+    "data": {
+      "plan": {
+        "id": "5ebcf560b6d82ea93e967ecd",
+        "list": [
+          {
+            "id": "urn:resource:1:175855",
+            "name": "Best i test!",
+            "contentUri": "urn:article:13742",
+            "path": null,
+            "paths": [
+              "/subject:d1fe9d0a-a54d-49db-a4c2-fd5463a7c9e7/topic:dfb84312-32e1-4265-9965-5b4a401691d1/resource:1:175855",
+              "/subject:21/topic:1:182640/topic:1:186972/resource:1:175855",
+              "/subject:3d9454e8-460e-42c7-8f28-71663fbbf6e6/topic:f604b380-5cdb-4227-885e-bc9b57cb3237/topic:731b409d-4a54-4f56-9bd3-c2fe4912c556/resource:1:175855"
+            ],
+            "metaId": null,
+            "metaTitle": null,
+            "metaIntroduction": null,
+            "metaDescription": null,
+            "grepCodes": null,
+            "article": {
+              "id": "13742",
+              "title": "Best i test!",
+              "introduction": "For å gjøre det lettere for oss å ta bærekraftige valg når vi kjøper noe, er det utviklet en rekke merkeordninger. Disse gir informasjon om miljø, sosiale forhold og dyrevelferd. I tillegg bør vi vurdere transport og bruk av emballasje. Sammenlign ulike varer og kår den mest bærekraftige!",
+              "created": "2017-03-16T09:41:17Z",
+              "updated": "2020-03-18T07:15:15Z",
+              "published": "2020-02-23T11:00:00Z",
+              "metaDescription": "Lag en forbruker-reportasje det du vurderer en varegruppe på bakgrunn av en rekke bærekraft-kriterier.",
+              "articleType": "standard",
+              "supportedLanguages": [
+                "nb",
+                "nn"
+              ],
+              "tags": [
+                "forbrukertest",
+                "klima",
+                "klimaendringer",
+                "klimatiltak"
+              ],
+              "competenceGoals": [
+                {
+                  "id": "e2b2997c-2a11-4495-8898-e17f66bb177c",
+                  "code": "KM811",
+                  "title": "utforske en selvvalgt naturfaglig problemstilling, presentere funn og argumentere for valg av metoder",
+                  "curriculum": {
+                    "id": "b4c394d2-750f-4223-992a-c7fba5301e94",
+                    "code": "NAT01-04",
+                    "title": "Læreplan i naturfag"
+                  },
+                  "competenceGoalSet": {
+                    "id": "8b464e6a-d5cf-4506-81db-e256669ce6bd",
+                    "code": "KV77",
+                    "title": "Kompetansemål og vurdering Vg1 studieforberedende utdanningsprogram"
+                  },
+                  "crossSubjectTopics": {
+                    "reference": null,
+                    "explanation": null
+                  },
+                  "coreElements": {
+                    "reference": null,
+                    "explanation": null
+                  }
+                },
+                {
+                  "id": "623902a5-df40-42f6-891d-9bd4d78720e6",
+                  "code": "KM722",
+                  "title": "gjøre rede for aktuelle miljøutfordringer knyttet til handel og reiseliv og drøfte disse i et bærekraftsperspektiv",
+                  "curriculum": {
+                    "id": "b4c394d2-750f-4223-992a-c7fba5301e94",
+                    "code": "NAT01-04",
+                    "title": "Læreplan i naturfag"
+                  },
+                  "competenceGoalSet": {
+                    "id": "b92bc0b7-1780-4323-b920-d6d3aee96f08",
+                    "code": "KV70",
+                    "title": "Kompetansemål og vurdering Vg1 salg, service og reiseliv"
+                  },
+                  "crossSubjectTopics": {
+                    "reference": null,
+                    "explanation": null
+                  },
+                  "coreElements": {
+                    "reference": null,
+                    "explanation": null
+                  }
+                },
+                {
+                  "id": "e5006d95-71ce-4b87-9336-8f0b2311aef0",
+                  "code": "KM721",
+                  "title": "undersøke ulike materialers og produkters livsløp og vurdere disse i et bærekraftsperspektiv",
+                  "curriculum": {
+                    "id": "b4c394d2-750f-4223-992a-c7fba5301e94",
+                    "code": "NAT01-04",
+                    "title": "Læreplan i naturfag"
+                  },
+                  "competenceGoalSet": {
+                    "id": "b92bc0b7-1780-4323-b920-d6d3aee96f08",
+                    "code": "KV70",
+                    "title": "Kompetansemål og vurdering Vg1 salg, service og reiseliv"
+                  },
+                  "crossSubjectTopics": {
+                    "reference": null,
+                    "explanation": null
+                  },
+                  "coreElements": {
+                    "reference": null,
+                    "explanation": null
+                  }
+                },
+                {
+                  "id": "c5ba3fe5-bbff-4960-9805-d435bbe442e5",
+                  "code": "KM728",
+                  "title": "undersøke og vurdere livsløpet til ulike produkter i et bærekraftsperspektiv",
+                  "curriculum": {
+                    "id": "b4c394d2-750f-4223-992a-c7fba5301e94",
+                    "code": "NAT01-04",
+                    "title": "Læreplan i naturfag"
+                  },
+                  "competenceGoalSet": {
+                    "id": "a5fcda74-8d9e-4969-8f41-25a268043c61",
+                    "code": "KV69",
+                    "title": "Kompetansemål og vurdering Vg1 frisør, blomster, interiør og eksponeringsdesign"
+                  },
+                  "crossSubjectTopics": {
+                    "reference": null,
+                    "explanation": null
+                  },
+                  "coreElements": {
+                    "reference": null,
+                    "explanation": null
+                  }
+                },
+                {
+                  "id": "47532f14-865d-4279-a94a-e83fb713601b",
+                  "code": "KM750",
+                  "title": "undersøke og vurdere livsløpet til ulike produkter i et bærekraftsperspektiv",
+                  "curriculum": {
+                    "id": "b4c394d2-750f-4223-992a-c7fba5301e94",
+                    "code": "NAT01-04",
+                    "title": "Læreplan i naturfag"
+                  },
+                  "competenceGoalSet": {
+                    "id": "f23b49b3-546e-4d12-8929-868a7d41b60a",
+                    "code": "KV72",
+                    "title": "Kompetansemål og vurdering Vg1 håndverk, design og produktutvikling"
+                  },
+                  "crossSubjectTopics": {
+                    "reference": null,
+                    "explanation": null
+                  },
+                  "coreElements": {
+                    "reference": null,
+                    "explanation": null
+                  }
+                }
+              ]
+            },
+            "subject_ids": null,
+            "article_ids": null,
+            "ndla_topic_ids": null,
+            "ndla_article_ids": null
+          },
+          {
+            "id": "urn:resource:1:188315",
+            "name": "Biodiesel – bløff eller bærekraft?",
+            "contentUri": "urn:article:13957",
+            "path": null,
+            "paths": [
+              "/subject:21/topic:1:183351/topic:1:183360/resource:1:188315",
+              "/subject:d1fe9d0a-a54d-49db-a4c2-fd5463a7c9e7/topic:dfb84312-32e1-4265-9965-5b4a401691d1/resource:1:188315"
+            ],
+            "metaId": null,
+            "metaTitle": null,
+            "metaIntroduction": null,
+            "metaDescription": null,
+            "grepCodes": null,
+            "article": {
+              "id": "13957",
+              "title": "Biodiesel – bløff eller bærekraft?",
+              "introduction": "Gå inn i rollen som kritisk journalist og lag en reportasje om biodiesel. Arbeidstittelen er \"Biodiesel – bløff eller bærekraft?\"",
+              "created": "2018-05-11T09:33:10Z",
+              "updated": "2020-03-17T09:22:08Z",
+              "published": "2018-09-04T11:12:23Z",
+              "metaDescription": "Gå inn i rollen som kritisk journalist og lag en reportasje om biodiesel. Arbeidstittelen er \"Biodiesel – bløff eller bærekraft?\"",
+              "articleType": "standard",
+              "supportedLanguages": [
+                "nb",
+                "nn"
+              ],
+              "tags": [
+                "biodrivstoff",
+                "bioenergi",
+                "bærekraftig forbruk",
+                "klimaendringer"
+              ],
+              "competenceGoals": [
+                {
+                  "id": "9a63b474-5a25-497d-ab8b-3eb222249020",
+                  "code": "KM816",
+                  "title": "utforske egenskaper og reaksjoner til noen organiske og uorganiske karbonforbindelser, gi eksempler på anvendelser og gjøre rede for karbonets betydning for livet på jorda",
+                  "curriculum": {
+                    "id": "b4c394d2-750f-4223-992a-c7fba5301e94",
+                    "code": "NAT01-04",
+                    "title": "Læreplan i naturfag"
+                  },
+                  "competenceGoalSet": {
+                    "id": "8b464e6a-d5cf-4506-81db-e256669ce6bd",
+                    "code": "KV77",
+                    "title": "Kompetansemål og vurdering Vg1 studieforberedende utdanningsprogram"
+                  },
+                  "crossSubjectTopics": {
+                    "reference": null,
+                    "explanation": null
+                  },
+                  "coreElements": {
+                    "reference": null,
+                    "explanation": null
+                  }
+                },
+                {
+                  "id": "caa8e640-ebe4-45ad-adef-564be6817223",
+                  "code": "KM485",
+                  "title": "reflektere over eigen ressursbruk og ressursbruken i Noreg i eit globalt og berekraftig perspektiv",
+                  "curriculum": {
+                    "id": "71489ad0-dfa0-4d7d-ac88-f1c5739bf52e",
+                    "code": "GEO01-02",
+                    "title": "Læreplan i geografi - fellesfag i studieførebuande utdanningsprogram"
+                  },
+                  "competenceGoalSet": {
+                    "id": "a8ce3a6e-e2da-4871-8313-53182a805cc6",
+                    "code": "KV49",
+                    "title": "Kompetansemål og vurdering"
+                  },
+                  "crossSubjectTopics": {
+                    "reference": null,
+                    "explanation": null
+                  },
+                  "coreElements": {
+                    "reference": null,
+                    "explanation": null
+                  }
+                },
+                {
+                  "id": "a4d91353-1439-438e-aec0-ffd31de9f94f",
+                  "code": "KM686",
+                  "title": "undersøke problemstillinger knyttet til arealbruk, gjøre rede for hvordan endringer kan påvirke økosystemer, og foreslå bærekraftige løsninger",
+                  "curriculum": {
+                    "id": "b4c394d2-750f-4223-992a-c7fba5301e94",
+                    "code": "NAT01-04",
+                    "title": "Læreplan i naturfag"
+                  },
+                  "competenceGoalSet": {
+                    "id": "43c8410a-4930-479f-8031-c379897f33a0",
+                    "code": "KV82",
+                    "title": "Kompetansemål og vurdering Vg1 naturbruk"
+                  },
+                  "crossSubjectTopics": {
+                    "reference": null,
+                    "explanation": null
+                  },
+                  "coreElements": {
+                    "reference": null,
+                    "explanation": null
+                  }
+                }
+              ]
+            },
+            "subject_ids": null,
+            "article_ids": null,
+            "ndla_topic_ids": null,
+            "ndla_article_ids": null
+          },
+          {
+            "id": "urn:resource:15d5dd32-f363-45b2-8b52-75e52dcef8e4",
+            "name": "Jeg bidrar til bærekraftig forbruk",
+            "contentUri": "urn:article:17287",
+            "path": null,
+            "paths": [
+              "/subject:24/topic:bcdc148d-c2d6-458d-b2bf-707728888f83/topic:299fe599-e041-4545-af20-e762f0e6fe94/resource:15d5dd32-f363-45b2-8b52-75e52dcef8e4",
+              "/subject:d1fe9d0a-a54d-49db-a4c2-fd5463a7c9e7/topic:72ce48ff-e6d4-4760-857b-dc7c12d8b134/resource:15d5dd32-f363-45b2-8b52-75e52dcef8e4",
+              "/subject:3d9454e8-460e-42c7-8f28-71663fbbf6e6/topic:f604b380-5cdb-4227-885e-bc9b57cb3237/topic:731b409d-4a54-4f56-9bd3-c2fe4912c556/resource:15d5dd32-f363-45b2-8b52-75e52dcef8e4"
+            ],
+            "metaId": null,
+            "metaTitle": null,
+            "metaIntroduction": null,
+            "metaDescription": null,
+            "grepCodes": null,
+            "article": {
+              "id": "17287",
+              "title": "Jeg bidrar til bærekraftig forbruk",
+              "introduction": "Som enkeltpersoner kan vi velge å legge om forbruket vårt i en mer bærekraftig retning, men det har større effekt hvis mange gjør det samme. Få med deg vennene dine og bruk forbrukermakta til å påvirke dem som selger varer og tjenester!",
+              "created": "2019-02-21T13:07:11Z",
+              "updated": "2020-05-09T08:31:12Z",
+              "published": "2019-02-21T13:07:11Z",
+              "metaDescription": "Som enkeltpersoner kan vi velge å legge om forbruket vårt i en mer bærekraftig retning, men det har større effekt hvis mange gjør det samme. ",
+              "articleType": "standard",
+              "supportedLanguages": [
+                "nb",
+                "nn"
+              ],
+              "tags": [
+                "forbrukermakt",
+                "forbruk",
+                "bærekraft"
+              ],
+              "competenceGoals": null
+            },
+            "subject_ids": null,
+            "article_ids": null,
+            "ndla_topic_ids": null,
+            "ndla_article_ids": null
+          },
+          {
+            "id": "urn:resource:ad3d53e5-121f-4494-aa2d-59f1a42379f6",
+            "name": "Kan en 16-åring redde klimaet?",
+            "contentUri": "urn:article:22808",
+            "path": null,
+            "paths": [
+              "/subject:d1fe9d0a-a54d-49db-a4c2-fd5463a7c9e7/topic:72ce48ff-e6d4-4760-857b-dc7c12d8b134/resource:ad3d53e5-121f-4494-aa2d-59f1a42379f6"
+            ],
+            "metaId": null,
+            "metaTitle": null,
+            "metaIntroduction": null,
+            "metaDescription": null,
+            "grepCodes": null,
+            "article": {
+              "id": "22808",
+              "title": "Kan en 16-åring redde klimaet?",
+              "introduction": "Prøv å svare på spørsmålet i tittelen. Tror du svaret er ja eller nei?",
+              "created": "2020-03-17T11:28:20Z",
+              "updated": "2020-03-18T08:52:46Z",
+              "published": "2020-03-17T11:28:20Z",
+              "metaDescription": "Førlesingsoppgave til læringsstien \"Kan en 16-åring redde klimaet?\"",
+              "articleType": "standard",
+              "supportedLanguages": [
+                "nb",
+                "nn"
+              ],
+              "tags": [
+                "klima",
+                "førlesing",
+                "førlesingsoppgave",
+                "ungdom",
+                "klimaendring"
+              ],
+              "competenceGoals": null
+            },
+            "subject_ids": null,
+            "article_ids": null,
+            "ndla_topic_ids": null,
+            "ndla_article_ids": null
+          },
+          {
+            "id": "urn:resource:3a0dc91b-4fb3-41ed-a4c5-b94cb3a0bf89",
+            "name": "Diskuter bærekraftige reiser",
+            "contentUri": "urn:article:22221",
+            "path": null,
+            "paths": [
+              "/subject:d1fe9d0a-a54d-49db-a4c2-fd5463a7c9e7/topic:b09feb33-4058-4756-a632-ad456b0743a5/resource:3a0dc91b-4fb3-41ed-a4c5-b94cb3a0bf89"
+            ],
+            "metaId": null,
+            "metaTitle": null,
+            "metaIntroduction": null,
+            "metaDescription": null,
+            "grepCodes": null,
+            "article": {
+              "id": "22221",
+              "title": "Diskuter bærekraftige reiser",
+              "introduction": "Diskuter hva som menes med bærekraftige reiser. Finn kriterier som dere mener må være oppfylt for at en reise skal kunne kalles bærekraftig.",
+              "created": "2020-02-10T13:56:49Z",
+              "updated": "2020-03-18T12:09:38Z",
+              "published": "2020-02-10T13:56:49Z",
+              "metaDescription": "Diskuter hva som menes med bærekraftige reiser.",
+              "articleType": "standard",
+              "supportedLanguages": [
+                "nb",
+                "nn"
+              ],
+              "tags": [
+                "reise",
+                "reiseliv",
+                "bærekraft",
+                "bærekraftig utvikling",
+                "tverrfaglig tema"
+              ],
+              "competenceGoals": [
+                {
+                  "id": "623902a5-df40-42f6-891d-9bd4d78720e6",
+                  "code": "KM722",
+                  "title": "gjøre rede for aktuelle miljøutfordringer knyttet til handel og reiseliv og drøfte disse i et bærekraftsperspektiv",
+                  "curriculum": {
+                    "id": "b4c394d2-750f-4223-992a-c7fba5301e94",
+                    "code": "NAT01-04",
+                    "title": "Læreplan i naturfag"
+                  },
+                  "competenceGoalSet": {
+                    "id": "b92bc0b7-1780-4323-b920-d6d3aee96f08",
+                    "code": "KV70",
+                    "title": "Kompetansemål og vurdering Vg1 salg, service og reiseliv"
+                  },
+                  "crossSubjectTopics": {
+                    "reference": null,
+                    "explanation": null
+                  },
+                  "coreElements": {
+                    "reference": null,
+                    "explanation": null
+                  }
+                },
+                {
+                  "id": "cf534f0a-9d72-4dce-9086-915e01c20032",
+                  "code": "KM481",
+                  "title": "drøfte ulike interesser knytte til ressurs- og arealbruk i Noreg, Sápmi/Sábme/Sáepmie og nordområda",
+                  "curriculum": {
+                    "id": "71489ad0-dfa0-4d7d-ac88-f1c5739bf52e",
+                    "code": "GEO01-02",
+                    "title": "Læreplan i geografi - fellesfag i studieførebuande utdanningsprogram"
+                  },
+                  "competenceGoalSet": {
+                    "id": "a8ce3a6e-e2da-4871-8313-53182a805cc6",
+                    "code": "KV49",
+                    "title": "Kompetansemål og vurdering"
+                  },
+                  "crossSubjectTopics": {
+                    "reference": null,
+                    "explanation": null
+                  },
+                  "coreElements": {
+                    "reference": null,
+                    "explanation": null
+                  }
+                }
+              ]
+            },
+            "subject_ids": null,
+            "article_ids": null,
+            "ndla_topic_ids": null,
+            "ndla_article_ids": null
+          },
+          {
+            "id": "urn:resource:62abf0cd-f008-4d78-9165-d75cc3e892af",
+            "name": "Bør du ha flyskam? ",
+            "contentUri": "urn:article:22418",
+            "path": null,
+            "paths": [
+              "/subject:80063181-61d8-4c52-9bbc-4313376175a2/topic:a4bf97c3-9daf-4587-bc9f-822855432151/topic:8a4e6d04-3623-498b-be46-733f97b989eb/resource:62abf0cd-f008-4d78-9165-d75cc3e892af",
+              "/subject:fd43e0c7-9dd6-427d-9edb-2e4234d8db9d/topic:950f0c23-8d14-4c4d-830a-0b9cf1d50844/topic:0a853189-d445-4798-87a8-5635ccec4740/resource:62abf0cd-f008-4d78-9165-d75cc3e892af",
+              "/subject:d1fe9d0a-a54d-49db-a4c2-fd5463a7c9e7/topic:b09feb33-4058-4756-a632-ad456b0743a5/resource:62abf0cd-f008-4d78-9165-d75cc3e892af"
+            ],
+            "metaId": null,
+            "metaTitle": null,
+            "metaIntroduction": null,
+            "metaDescription": null,
+            "grepCodes": null,
+            "article": {
+              "id": "22418",
+              "title": "Bør du ha flyskam? ",
+              "introduction": "De fleste av oss elsker å reise. Skal vi langt, tar vi gjerne fly – fly for å sole oss, fly for å oppdage nye kulturer, fly for å shoppe og fly for å besøke venner og familie. Men bør vi egentlig skamme oss og tenke mer på klima? Gjør deg opp en mening, diskuter og skriv et debattinnlegg.",
+              "created": "2020-02-20T14:38:15Z",
+              "updated": "2020-03-18T08:42:05Z",
+              "published": "2020-02-20T14:38:15Z",
+              "metaDescription": "Skriv et innlegg der du enten drøfter eller argumenterer for eller mot at vi bør slutte å fly.",
+              "articleType": "standard",
+              "supportedLanguages": [
+                "nb",
+                "nn"
+              ],
+              "tags": [
+                "Flyskam",
+                "Drøfting",
+                "Fagartikkel",
+                "bærekraft",
+                "bærekraftig utvikling",
+                "leserinnlegg"
+              ],
+              "competenceGoals": [
+                {
+                  "id": "caa8e640-ebe4-45ad-adef-564be6817223",
+                  "code": "KM485",
+                  "title": "reflektere over eigen ressursbruk og ressursbruken i Noreg i eit globalt og berekraftig perspektiv",
+                  "curriculum": {
+                    "id": "71489ad0-dfa0-4d7d-ac88-f1c5739bf52e",
+                    "code": "GEO01-02",
+                    "title": "Læreplan i geografi - fellesfag i studieførebuande utdanningsprogram"
+                  },
+                  "competenceGoalSet": {
+                    "id": "a8ce3a6e-e2da-4871-8313-53182a805cc6",
+                    "code": "KV49",
+                    "title": "Kompetansemål og vurdering"
+                  },
+                  "crossSubjectTopics": {
+                    "reference": null,
+                    "explanation": null
+                  },
+                  "coreElements": {
+                    "reference": null,
+                    "explanation": null
+                  }
+                },
+                {
+                  "id": "623902a5-df40-42f6-891d-9bd4d78720e6",
+                  "code": "KM722",
+                  "title": "gjøre rede for aktuelle miljøutfordringer knyttet til handel og reiseliv og drøfte disse i et bærekraftsperspektiv",
+                  "curriculum": {
+                    "id": "b4c394d2-750f-4223-992a-c7fba5301e94",
+                    "code": "NAT01-04",
+                    "title": "Læreplan i naturfag"
+                  },
+                  "competenceGoalSet": {
+                    "id": "b92bc0b7-1780-4323-b920-d6d3aee96f08",
+                    "code": "KV70",
+                    "title": "Kompetansemål og vurdering Vg1 salg, service og reiseliv"
+                  },
+                  "crossSubjectTopics": {
+                    "reference": null,
+                    "explanation": null
+                  },
+                  "coreElements": {
+                    "reference": null,
+                    "explanation": null
+                  }
+                },
+                {
+                  "id": "c69d8f63-e5dd-45a6-bdd4-59ac5409279e",
+                  "code": "KM1182",
+                  "title": "bruke ulike kilder på en kritisk, selvstendig og etterrettelig måte",
+                  "curriculum": {
+                    "id": "c4c70d0a-8c21-49f4-9298-7113231bb8e2",
+                    "code": "NOR01-06",
+                    "title": "Læreplan i norsk"
+                  },
+                  "competenceGoalSet": {
+                    "id": "76bc9cd0-724a-48af-bd8e-60842e5c3025",
+                    "code": "KV114",
+                    "title": "Kompetansemål og vurdering Vg1 studieforberedende utdanningsprogram"
+                  },
+                  "crossSubjectTopics": {
+                    "reference": null,
+                    "explanation": null
+                  },
+                  "coreElements": {
+                    "reference": null,
+                    "explanation": null
+                  }
+                },
+                {
+                  "id": "0322bc6c-936a-4331-b811-00dfadcb71d8",
+                  "code": "KM1185",
+                  "title": "lytte til andre, bygge opp saklig argumentasjon og bruke retoriske appellformer i diskusjoner",
+                  "curriculum": {
+                    "id": "c4c70d0a-8c21-49f4-9298-7113231bb8e2",
+                    "code": "NOR01-06",
+                    "title": "Læreplan i norsk"
+                  },
+                  "competenceGoalSet": {
+                    "id": "76bc9cd0-724a-48af-bd8e-60842e5c3025",
+                    "code": "KV114",
+                    "title": "Kompetansemål og vurdering Vg1 studieforberedende utdanningsprogram"
+                  },
+                  "crossSubjectTopics": {
+                    "reference": null,
+                    "explanation": null
+                  },
+                  "coreElements": {
+                    "reference": null,
+                    "explanation": null
+                  }
+                },
+                {
+                  "id": "644b2fe0-987b-4b93-b942-9a1e9e491269",
+                  "code": "KM1208",
+                  "title": "skrive tekster med god struktur og tekstbinding og mestre tegnsetting og rettskriving på hovedmål og sidemål",
+                  "curriculum": {
+                    "id": "c4c70d0a-8c21-49f4-9298-7113231bb8e2",
+                    "code": "NOR01-06",
+                    "title": "Læreplan i norsk"
+                  },
+                  "competenceGoalSet": {
+                    "id": "76bc9cd0-724a-48af-bd8e-60842e5c3025",
+                    "code": "KV114",
+                    "title": "Kompetansemål og vurdering Vg1 studieforberedende utdanningsprogram"
+                  },
+                  "crossSubjectTopics": {
+                    "reference": null,
+                    "explanation": null
+                  },
+                  "coreElements": {
+                    "reference": null,
+                    "explanation": null
+                  }
+                },
+                {
+                  "id": "b8533a4d-8426-467e-901e-deba55274dd1",
+                  "code": "KM1223",
+                  "title": "skrive fagartikler som greier ut om og drøfter norskfaglige eller tverrfaglige temaer",
+                  "curriculum": {
+                    "id": "c4c70d0a-8c21-49f4-9298-7113231bb8e2",
+                    "code": "NOR01-06",
+                    "title": "Læreplan i norsk"
+                  },
+                  "competenceGoalSet": {
+                    "id": "76bc9cd0-724a-48af-bd8e-60842e5c3025",
+                    "code": "KV114",
+                    "title": "Kompetansemål og vurdering Vg1 studieforberedende utdanningsprogram"
+                  },
+                  "crossSubjectTopics": {
+                    "reference": null,
+                    "explanation": null
+                  },
+                  "coreElements": {
+                    "reference": null,
+                    "explanation": null
+                  }
+                }
+              ]
+            },
+            "subject_ids": null,
+            "article_ids": null,
+            "ndla_topic_ids": null,
+            "ndla_article_ids": null
+          },
+          {
+            "id": "urn:resource:1:102659",
+            "name": "Hva mener vi med bærekraftig reiseliv?",
+            "contentUri": "urn:article:13322",
+            "path": null,
+            "paths": [
+              "/subject:d1fe9d0a-a54d-49db-a4c2-fd5463a7c9e7/topic:b09feb33-4058-4756-a632-ad456b0743a5/resource:1:102659",
+              "/subject:fd43e0c7-9dd6-427d-9edb-2e4234d8db9d/topic:950f0c23-8d14-4c4d-830a-0b9cf1d50844/topic:0a853189-d445-4798-87a8-5635ccec4740/resource:1:102659",
+              "/subject:35/topic:1:193613/resource:1:102659"
+            ],
+            "metaId": null,
+            "metaTitle": null,
+            "metaIntroduction": null,
+            "metaDescription": null,
+            "grepCodes": null,
+            "article": {
+              "id": "13322",
+              "title": "Hva mener vi med bærekraftig reiseliv?",
+              "introduction": "Når du er ute og reiser, tenker du noen gang på hvilke spor du legger igjen? Ønsker du at de neste generasjonene skal få oppleve det samme som deg? Hva er egentlig et bærekraftig reiseliv?",
+              "created": "2012-07-26T12:04:55Z",
+              "updated": "2020-03-18T08:45:05Z",
+              "published": "2019-01-18T08:54:08Z",
+              "metaDescription": "Her presenterer vi hva som menes med bærekraft, og hva et bærekraftig reiseliv innebærer for natur, kultur og økonomi.",
+              "articleType": "standard",
+              "supportedLanguages": [
+                "nb",
+                "nn"
+              ],
+              "tags": [
+                "internasjonalt segment",
+                "nasjonalt segment",
+                "reiselivsnæringen",
+                "Bærekraftig reiseliv"
+              ],
+              "competenceGoals": [
+                {
+                  "id": "623902a5-df40-42f6-891d-9bd4d78720e6",
+                  "code": "KM722",
+                  "title": "gjøre rede for aktuelle miljøutfordringer knyttet til handel og reiseliv og drøfte disse i et bærekraftsperspektiv",
+                  "curriculum": {
+                    "id": "b4c394d2-750f-4223-992a-c7fba5301e94",
+                    "code": "NAT01-04",
+                    "title": "Læreplan i naturfag"
+                  },
+                  "competenceGoalSet": {
+                    "id": "b92bc0b7-1780-4323-b920-d6d3aee96f08",
+                    "code": "KV70",
+                    "title": "Kompetansemål og vurdering Vg1 salg, service og reiseliv"
+                  },
+                  "crossSubjectTopics": {
+                    "reference": null,
+                    "explanation": null
+                  },
+                  "coreElements": {
+                    "reference": null,
+                    "explanation": null
+                  }
+                }
+              ]
+            },
+            "subject_ids": null,
+            "article_ids": null,
+            "ndla_topic_ids": null,
+            "ndla_article_ids": null
+          },
+          {
+            "id": "urn:resource:964878f3-9b9b-48bc-bbdb-5b93984d0540",
+            "name": "Sweatshop – dødelig mote",
+            "contentUri": "urn:article:22354",
+            "path": null,
+            "paths": [
+              "/subject:7509b507-548d-48e1-bef3-a06758e4820c/topic:665af7ec-7a96-4c9a-b5d4-3dc600dfc9ff/resource:964878f3-9b9b-48bc-bbdb-5b93984d0540",
+              "/subject:d41a472f-5a93-4e46-b658-f1e681284901/topic:ab444698-58a5-430f-a546-76fdb01c8b09/resource:964878f3-9b9b-48bc-bbdb-5b93984d0540",
+              "/subject:3d9454e8-460e-42c7-8f28-71663fbbf6e6/topic:f604b380-5cdb-4227-885e-bc9b57cb3237/topic:731b409d-4a54-4f56-9bd3-c2fe4912c556/resource:964878f3-9b9b-48bc-bbdb-5b93984d0540"
+            ],
+            "metaId": null,
+            "metaTitle": null,
+            "metaIntroduction": null,
+            "metaDescription": null,
+            "grepCodes": null,
+            "article": {
+              "id": "22354",
+              "title": "Sweatshop – dødelig mote",
+              "introduction": "Serien Sweatshop handler om skandinaviske ungdommer som jobber i en tekstilfabrikk i Kambodsja, for å få et innblikk i arbeidsforholdene der. Denne episoden er fra sesong 2 der ungdommene kommer tilbake for å se om forholdene ved fabrikkene har endret seg.",
+              "created": "2020-02-17T13:44:27Z",
+              "updated": "2020-04-02T11:34:22Z",
+              "published": "2020-02-17T13:44:27Z",
+              "metaDescription": "Diskuter bærekraftig utvikling og bærekraftmålene tekstil- og klesindustrien.",
+              "articleType": "standard",
+              "supportedLanguages": [
+                "nb",
+                "nn"
+              ],
+              "tags": [
+                "tekstilindustri",
+                "klær",
+                "bærekraftig utvikling"
+              ],
+              "competenceGoals": null
+            },
+            "subject_ids": null,
+            "article_ids": null,
+            "ndla_topic_ids": null,
+            "ndla_article_ids": null
+          },
+          {
+            "id": "urn:resource:ec3657e7-1323-4106-a71c-56f69fc24a27",
+            "name": "Hva avgjør om et produkt er bærekraftig eller ikke?",
+            "contentUri": "urn:article:20734",
+            "path": null,
+            "paths": [
+              "/subject:d41a472f-5a93-4e46-b658-f1e681284901/topic:ab444698-58a5-430f-a546-76fdb01c8b09/resource:ec3657e7-1323-4106-a71c-56f69fc24a27",
+              "/subject:3d9454e8-460e-42c7-8f28-71663fbbf6e6/topic:f604b380-5cdb-4227-885e-bc9b57cb3237/topic:731b409d-4a54-4f56-9bd3-c2fe4912c556/resource:ec3657e7-1323-4106-a71c-56f69fc24a27",
+              "/subject:d1fe9d0a-a54d-49db-a4c2-fd5463a7c9e7/topic:302d4eb1-e022-4356-a988-db8f8b52bac6/resource:ec3657e7-1323-4106-a71c-56f69fc24a27",
+              "/subject:7509b507-548d-48e1-bef3-a06758e4820c/topic:665af7ec-7a96-4c9a-b5d4-3dc600dfc9ff/resource:ec3657e7-1323-4106-a71c-56f69fc24a27"
+            ],
+            "metaId": null,
+            "metaTitle": null,
+            "metaIntroduction": null,
+            "metaDescription": null,
+            "grepCodes": null,
+            "article": {
+              "id": "20734",
+              "title": "Hva avgjør om et produkt er bærekraftig eller ikke?",
+              "introduction": "Diskuter hvilke faktorer som er viktigst for bærekraft og  lag en prioritert liste.",
+              "created": "2019-11-15T22:07:36Z",
+              "updated": "2020-04-15T10:17:31Z",
+              "published": "2019-11-15T22:07:36Z",
+              "metaDescription": "Diskuter hvilke faktorer som er viktigst for bærekraft og lag en prioritert liste.",
+              "articleType": "standard",
+              "supportedLanguages": [
+                "nb",
+                "nn"
+              ],
+              "tags": [
+                "bærekraftsmål",
+                "bærekraftig",
+                "bærekraftig produkt"
+              ],
+              "competenceGoals": null
+            },
+            "subject_ids": null,
+            "article_ids": null,
+            "ndla_topic_ids": null,
+            "ndla_article_ids": null
+          }
+        ]
+      }
+    }
+  }

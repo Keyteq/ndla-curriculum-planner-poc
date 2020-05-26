@@ -10,16 +10,21 @@ module.exports = {
       const file = JSON.parse(rawUdirPlan.buffer.toString('utf-8'));
       const articles = await queryHelper.getArticleIdsAndUdirIdsFromUdir(file, ndla.models);
       const list = await Promise.all(articles.map(async (item) => {
-        const { data: { competenceGoals } } = await api.competenceGoals({ codes: item.grepCodes });
-        const { data: { article: ndlaArticleData } } = await api.article({ id: item.ndlaId });
-        return {
-          ...ndlaArticleData,
-          competenceGoals,
-        };
+        if (item.ndlaResourceIds && item.ndlaResourceIds[0]) {
+          const { data: { competenceGoals } } = await api
+            .competenceGoals({ codes: item.grepCodes });
+          const { data: { resource: ndlaResourceData } } = await api
+            .resource({ id: item.ndlaResourceIds[0] });
+          return {
+            ...ndlaResourceData,
+            competenceGoals,
+          };
+        }
+        return null;
       }));
       return {
         id,
-        list,
+        list: list.filter((item) => !!item),
       };
     },
   },

@@ -8,7 +8,29 @@ const gqlSchema = gql`
   # Batch Base
   type plan {
     id: ID!
-    list: [article!]
+    list: [resource!]
+  }
+
+  type resource {
+    id: String!
+    name: String
+    contentUri: String
+    path: String
+    paths: [String!]
+    metaId: String
+    metaTitle: String
+    metaIntroduction: String
+    metaDescription: String
+    grepCodes: [String!]
+
+    article: article
+
+    subject_ids: [ID!]
+    topic_ids: [ID!]
+    article_ids: [ID!]
+    ndla_subject_ids: [String!]
+    ndla_topic_ids: [String!]
+    ndla_article_ids: [String!]
   }
 
   type article {

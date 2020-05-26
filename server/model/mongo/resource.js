@@ -7,14 +7,35 @@ const mongoSchema = new mongoose.Schema(
       required: '{PATH} is required!',
       unique: true,
     },
-    title: {
+    name: {
       type: String,
       required: '{PATH} is required!',
+    },
+    contentUri: {
+      type: String,
+      required: '{PATH} is required!',
+    },
+    path: {
+      type: String,
+    },
+    paths: [{
+      type: String,
+    }],
+    metaId: {
+      type: String,
+    },
+    metaTitle: {
+      type: String,
+    },
+    metaIntroduction: {
+      type: String,
+    },
+    metaDescription: {
+      type: String,
     },
     grepCodes: [{
       type: String,
     }],
-    // TODO: Not an ideal data struct, but the fastest way to do this. (subject_ids && topic_ids)
     subject_ids: [{
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Subject',
@@ -23,9 +44,9 @@ const mongoSchema = new mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Topic',
     }],
-    resource_ids: [{
+    article_ids: [{
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'Resource',
+      ref: 'Article',
     }],
     ndla_subject_ids: [{
       type: String,
@@ -33,7 +54,7 @@ const mongoSchema = new mongoose.Schema(
     ndla_topic_ids: [{
       type: String,
     }],
-    ndla_resource_ids: [{
+    ndla_article_ids: [{
       type: String,
     }],
   },
@@ -42,6 +63,6 @@ const mongoSchema = new mongoose.Schema(
   },
 );
 
-const mongoModel = mongoose.model('Article', mongoSchema);
+const mongoModel = mongoose.model('Resource', mongoSchema);
 
 module.exports = mongoModel;
